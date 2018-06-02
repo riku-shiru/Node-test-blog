@@ -1,0 +1,15 @@
+<% include ../header%>
+	<h1>編集画面</h1>
+
+	<form method="post" action="/post/<%=id%>">
+		Title:<input type="text" name="title" value="<%=post.title%>"><br>
+		Body:<textarea name="body"><%=post.body%></textarea><br>
+
+		<input type="hidden" name="id" value="<%= id %>">
+		<input type="hidden" name="_csrf" value="<%= token %>">
+		<input type="hidden" name="_method" value="put">
+		<input type="submit" value ="更新">
+	</form>
+
+	<p><a href="/">Back</a></p>
+<% include ../footer%>

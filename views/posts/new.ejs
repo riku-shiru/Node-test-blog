@@ -1,0 +1,12 @@
+<% include ../header%>
+	<h1>新規作成</h1>
+
+	<form method="post" action="/post/create">
+		Title:<input type="text" name="title"><br>
+		Body:<textarea name="body"></textarea><br>
+		<input type="hidden" name="_csrf" value="<%= token %>">
+		<input type="submit" value ="作成">
+	</form>
+
+	<p><a href="/">Back</a></p>
+<% include ../footer%>
